@@ -13,9 +13,9 @@ public class MissionariesAndCannibals {
         Graph graph = new Graph();
         BankState rightBank = new BankState(3, 3, true);
         graph.addNodes(rightBank);
-        // System.out.println(graph.get());
-        // Set<String> solution = graph.dfs(rightBank);
-        List<String> solution = graph.dfs(rightBank);
+        graph.dfs(rightBank);
+        List<String> solution = graph.getVisited();
         System.out.println(solution.toString());
+        // System.out.println(graph.get());
     }
 }

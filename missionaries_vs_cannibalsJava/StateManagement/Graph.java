@@ -25,19 +25,22 @@ public class Graph {
     }
 
 
-    public List<String> dfs(BankState state) {
+    public void dfs(BankState state) {
         visited.add(state.toString());
         // System.out.println(state.toString());
         List<BankState> nextStates = graph.get(state.toString());
         for(int i = 0; i < nextStates.size(); i++) {
             BankState nextState = nextStates.get(i);
             if (nextState.toString() == "0 0 0") {
-                return visited;
+                return;
             } 
             if (!visited.contains(nextState.toString())) {
                 dfs(nextState);
             }
         }
+    }
+
+    public List<String> getVisited() {
         return visited;
     }
 }

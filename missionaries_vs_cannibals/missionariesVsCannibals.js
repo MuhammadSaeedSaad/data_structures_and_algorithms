@@ -69,7 +69,7 @@ function dfs(initialState, visited = new Set()) {
 
 
 addNode(initialState)
-// console.log(graph)
+console.log(graph)
 dfs(initialState)
 
 // console.log(tryLoad("3 3 1", loads[0])) 
